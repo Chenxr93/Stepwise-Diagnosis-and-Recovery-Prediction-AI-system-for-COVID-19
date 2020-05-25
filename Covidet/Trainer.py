@@ -37,16 +37,16 @@ class Trainer(nn.Module):
         self.lr = hparams['init_lr']
         self.best_models = {}
         np.random.seed(0)
-        self.savapath = './savemodel_5-11_cvn_no_pretrain/'
-        self.data_set = DataBowl(phase='train',path_train ='/data/chenxiangru/covidData/TrainCov4-27',
-                path_val = '/data/chenxiangru/covidData/TestCov4-27')
+        self.savapath = 'model save path'
+        self.data_set = DataBowl(phase='train',path_train =hparams['train_dir'],
+                path_val = hparams['val_dir'])
         self.data_loader = torch.utils.data.DataLoader(self.data_set, shuffle=True,
                 batch_size=self.hparams['tr_bs'],
                 num_workers=8,
                 )
 
-        data_set_val = DataBowl(phase='val',path_train ='/data/chenxiangru/covidData/TrainCov4-27',
-                path_val = '/data/chenxiangru/covidData/TestCov4-27')
+        data_set_val = DataBowl(phase='val',path_train =hparams['train_dir'],
+                path_val = hparams['val_dir'])
         self.data_loader_val = torch.utils.data.DataLoader(data_set_val, shuffle=True,
                 batch_size=self.hparams['tr_bs'],
                 num_workers=8,
@@ -56,7 +56,7 @@ class Trainer(nn.Module):
         self.model = get_model('resGRU', nclass=1000, pretrained=True)
         self.model = self.model.cuda()
         self.model = DataParallel(self.model)
-        pre_dict = torch.load('/data/chenxiangru/covid2019/savemodel_5-11_cvn_no_pretrain/0.9623451746953926_0.8777777777777779_0.9526143790849673_0.8070987654320988_nvc.pkl')
+        pre_dict = torch.load('your path')
         self.model.load_state_dict(pre_dict)
         self.criterion = nn.BCELoss()
         self.optimizer = torch.optim.SGD(self.model.parameters(), lr=self.lr, momentum=0.9, weight_decay=1e-5)
@@ -162,8 +162,6 @@ class Trainer(nn.Module):
         self.model.train()
         # self.model.module.resmodel.features.denseblock4.denselayer16.register_forward_hook(self.get_features_hook)
         for i, (x, y) in enumerate(tqdm(self.data_loader)):
-            if i>170:
-                break
             x = x.cuda()
             y = y.float().cuda()
             #print(x.size(),y.size())

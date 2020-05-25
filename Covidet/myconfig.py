@@ -8,6 +8,10 @@ def create_parser(state=None):
     parser.add_argument('--model_name', default='res18x2WithOutDecoder',
             choices=('resnet50', 'resnet34', 'resnet18', 'res18x2', 'se18', 'se50', 'vgg16', 'vgg19', 'inceptionv3',
                 'seresnext50', 'mobile_net', 'resnext50','res18x2WithOutDecoder'))
+    parser.add_argument('--train_dir', type=str, default='./',  help='Your train folder path')
+    parser.add_argument('--val_dir', type=str, default='./', help='Your validation folder path')
+    parser.add_argument('--test_dir', type=str, default='./', help='Your test folder path')
+    parser.add_argument('--model_path', type=str, default='./', help='Your trained model path')
     parser.add_argument('--gpu_num', type=str, default='5,6', help='which gpu to use')
     parser.add_argument('--init_lr', type=float, default=5e-4, help='learning rate')
     parser.add_argument('--epochs', type=int, default=20, help='Number of epochs')
