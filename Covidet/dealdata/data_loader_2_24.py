@@ -186,8 +186,8 @@ def jumpGet(dirlist,total,b,numSeries):
 class DataBowl(Dataset):
     def __init__(self, phase='train', policy = None,wh = (256,256
                                                           ),numSeries = 20,
-                 path_train = '/data/chenxiangru/covidData/TrainCov3-17',
-                 path_val = '/data/chenxiangru/covidData/TestCov3-17'):
+                 path_train = '/data/chenxiangru/covidData/TrainCov',
+                 path_val = '/data/chenxiangru/covidData/TestCov'):
         assert (phase == 'train' or phase == 'val' or phase == 'test')
         self.phase = phase
         self.policy = policy
@@ -310,15 +310,15 @@ class DataBowl(Dataset):
     def __getitem__(self, item):
 
         images = []
-        if self.phase =='val':
-            label = int(self.imageList[item].split('/')[-1].split(',')[-1].split('.')[0])
+        if 'COVID19' in self.imageList[item]:
+            label = 1
         else:
-            label = int(self.imageList[item].split('/')[-1].split(',')[-1].split('.')[0])
+            label = 0
         fs = natsorted(os.listdir(self.imageList[item]))
         randomlist = [
             np.random.randint(0, 31) / 10. ,
-            np.random.randint(5, 15) / 10., # 随机因子
-            np.random.randint(5, 15) / 10.,  # 随机因1子
+            np.random.randint(5, 15) / 10.,
+            np.random.randint(5, 15) / 10.,
             np.random.randint(0,2),
             np.random.randint(0, 31) / 10.
             ]
