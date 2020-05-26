@@ -4,6 +4,8 @@ This is the Repository of Code of "Stepwise Diagnosis and Recovery Prediction AI
 ## Covidet
 * In this folder, Covidet's code and trained models are available.
 * 2 folders which contain test data are also available.
+## SVM
+* In this folder, SVM models with different kernels are available. 
 
 ## Seg
 * In this folder, deeplabv3+ with densenet121 backbone model is available.

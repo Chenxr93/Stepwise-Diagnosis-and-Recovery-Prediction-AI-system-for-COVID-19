@@ -1,5 +1,5 @@
 # Stepwise-Diagnosis-and-Recovery-Prediction-AI-system-for-COVID-19
-This is the Repository of Code of "Stepwise Diagnosis and Recovery Prediction AI system for COVID-19".
+This is the Covidet Code of "Stepwise Diagnosis and Recovery Prediction AI system for COVID-19".
 
 1. Use python Trainer.py --train_dir your_train_dir --val_dir your_validation_dir to train the model.
 
