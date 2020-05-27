@@ -12,3 +12,6 @@ This is the Repository of Code of "Stepwise Diagnosis and Recovery Prediction AI
 
 ## GPRPrediction
 * In this folder, GPR model with data processing code is available.
+
+## requirement.txt
+* requirement.txt lists the environment that is needed to run the model, which can be installed using ``` pip install -r requirement.txt```
