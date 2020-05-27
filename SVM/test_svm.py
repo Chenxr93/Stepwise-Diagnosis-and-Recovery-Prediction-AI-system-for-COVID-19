@@ -45,25 +45,19 @@ def preprocessing(json_path,df):
 
 
 if __name__ == '__main__':
-    df=pd.read_csv('E:\\Desktop\\kaggle\\sub_svm_out_withnoise.csv',
+    filepath = 'Your test csv file path.'
+    df=pd.read_csv(filepath,
                index_col=0,error_bad_lines=False, engine='python',encoding='gbk')
 
     all_model = {'rbf':'rbfsvm.pickle','linear':'linearsvm.pickle','poly':'polysvm.pickle','sigmoid':'sigmoidsvm.pickle'}
-    filename = 'oldtmp.json'
+    filename = 'oldtmp2.json'
     modelpath = all_model['rbf']
-    #  数据预处理
-
     X = preprocessing(filename,df)
-
     n_samples, n_features = X.shape
     random_state = np.random.RandomState(0)
     X = np.c_[X, random_state.randn(n_samples, 2 * n_features)]
-
-    # 遗传算法的输出
-
-    p = X[0:10,:] # 输入[x,48*3]
+    p = X[0:10,:]
     prob = get_prob(modelpath,p)
-
     print(prob[:,1])
 
 
