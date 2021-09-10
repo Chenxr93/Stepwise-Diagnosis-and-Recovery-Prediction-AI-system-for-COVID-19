@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-09-10T04:53:56.746Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36" etag="MpCefEQDxrqUEksUd24E" version="15.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2021-09-10T04:54:47.329Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36" etag="FXrvYzX5g302bEHoeI_Q" version="15.1.4" type="github">
   <diagram id="-1qST2PT7YDvNmCzR2n3" name="Page-1">
     <mxGraphModel dx="2249" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -150,13 +150,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="niSYp5rJRPZFxIQViTU1-45" value="配置项 config.py" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="521.36" y="30" width="218.64" height="78" as="geometry" />
+          <mxGeometry x="521.36" y="30" width="270" height="78" as="geometry" />
         </mxCell>
-        <mxCell id="niSYp5rJRPZFxIQViTU1-46" value="请求地址：&quot;approute&quot;：/lungDAC/" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="niSYp5rJRPZFxIQViTU1-45">
-          <mxGeometry y="26" width="218.64" height="26" as="geometry" />
+        <mxCell id="niSYp5rJRPZFxIQViTU1-46" value="请求地址：&quot;approute&quot;：“/lungDAC/“" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="niSYp5rJRPZFxIQViTU1-45">
+          <mxGeometry y="26" width="270" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="niSYp5rJRPZFxIQViTU1-47" value="回传地址：“DstUrl”：“”" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="niSYp5rJRPZFxIQViTU1-45">
-          <mxGeometry y="52" width="218.64" height="26" as="geometry" />
+        <mxCell id="niSYp5rJRPZFxIQViTU1-47" value="回传地址（用于结果回传）：“DstUrl”：“”" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="niSYp5rJRPZFxIQViTU1-45">
+          <mxGeometry y="52" width="270" height="26" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
